@@ -1,0 +1,19 @@
+.is-card-service {
+    padding: 0 1rem;
+}
+
+.is-icon-service {
+    margin-bottom: 2rem;
+    color: var(--white-text);
+}
+
+.is-description-service {
+    margin-bottom: 1rem;
+}
+
+.divider-gray-service {
+    height: 1px;
+    background-color: hsl(0, 0%, 48%);
+    margin-bottom: 1.5rem;
+    margin: 2rem 0;
+}

@@ -1,0 +1,32 @@
+.tile.is-child.has-margin-right {
+  margin-right: 1.25rem !important;
+}
+
+.linkedin:hover {
+  background-color: #0a66c2;
+}
+
+.github:hover {
+  color: #333;
+  background-color: white;
+}
+
+.twitter:hover {
+  background-color: #1da1f2;
+}
+
+.instagram:hover {
+  background-color: #c13584;
+}
+
+
+@media screen and (max-width: 768px){
+  .tile.is-child.has-margin-right.notification {
+    margin-right: 0 !important;
+    margin-bottom: 0.8rem !important;
+  }
+
+  .has-mobile-space {
+    gap: 0.8rem;
+  }
+}

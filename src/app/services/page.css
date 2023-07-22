@@ -1,0 +1,7 @@
+.is-info-services {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: flex-start;
+    height: 100%;
+}

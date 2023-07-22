@@ -1,0 +1,26 @@
+.is-tech {
+  display: flex;
+  flex-direction: rows;
+  align-items: center;
+  justify-content: left;
+  color: var(--white-text);
+}
+
+.is-icon, .is-framework {
+  margin-right: 0.5rem;
+}
+
+.progress-loader {
+  width: 80px;
+  background: rgba(236, 236, 238, 0.253);
+  height: 10px;
+  border-radius: 7px;
+}
+  
+.progress {
+  width: 0%;
+  height: 10px;
+  border-radius: 7px;
+  background-image: linear-gradient(to right top, rgb(34, 197, 94), rgb(202, 254, 0));
+  transition: 1s;
+}

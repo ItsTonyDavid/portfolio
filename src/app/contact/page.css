@@ -1,0 +1,42 @@
+.left-side {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    justify-content: flex-start;
+    height: 100%;
+}
+
+.is-contact-icon{
+    margin-right: 1rem;
+}
+
+.contact-points {
+    color: var(--white-text);
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    justify-content: flex-start;
+}
+
+.is-contact {
+    display: flex;
+    align-items: center;
+}
+
+
+
+  span.has-underline-green-gradient {
+    position: relative;
+  }
+
+  span.has-underline-green-gradient::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    left: 0;
+    height: 0.8px;
+    border-radius: 1px;
+    background: linear-gradient(to right top, rgb(34, 197, 94), rgb(202, 254, 0));
+  }
+  
