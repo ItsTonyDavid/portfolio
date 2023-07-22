@@ -28,7 +28,11 @@ const Project = ({title, description, technologies, duration, role}) => {
                         Technologies
                     </p>
                     <div className='is-tags'>
-                        { technologies.map(i => <Tag name={i}/>) }
+                    {technologies.map((i) => (
+                      <span key={i}>
+                        <Tag name={i}/>
+                      </span>
+                    ))}
                     </div>
                 </div>
                 <div className='columns is-columns-info'>

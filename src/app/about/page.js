@@ -1,7 +1,7 @@
 import './page.css'
 import Link from 'next/link'
 
-import {  faJs, faPython, faCuttlefish, faNodeJs, faHtml5, 
+import {  faJs, faPython, faCuttlefish, faNodeJs, faHtml5,
         faCss3, faReact, faVuejs, faDocker, faAws, faFigma } from "@fortawesome/free-brands-svg-icons"
 import { faDatabase, faMobile, faTornado } from "@fortawesome/free-solid-svg-icons";
 
@@ -22,10 +22,10 @@ export default function About(){
                         </div>
                         <div className='titles-about'>
                             <p className="title is-1 is-black-text">
-                                Let's talk about your project
+                                Let&apos;s talk about your project
                             </p>
                             <p className='subtitle is-6 is-subtitle is-black-text'>
-                                Let's super-charge your business today!
+                                Let&apos;s super-charge your business today!
                             </p>
                             <Link href="/contact">
                                 <Button text="Get a Free Price Quote"/>
@@ -38,7 +38,7 @@ export default function About(){
                 <article className="tile is-child notification">
                     <div className="is-title">
                         <p className="title is-3">
-                            I'm Specialized in
+                            I&apos;m Specialized in
                         </p>
                         <p className="title is-1 has-green-gradient is-title-green">
                             Web Development
@@ -117,22 +117,22 @@ export default function About(){
                         </p>
                         <div>
                             <p className='subtitle is-6'>
-                                I am a dedicated and skilled software engineer with a diverse 
-                                range of expertise, based in Monterrey, Nuevo León, Mexico. At 25 years old, 
-                                I bring a youthful and innovative perspective to my work, combined with a strong 
+                                I am a dedicated and skilled software engineer with a diverse
+                                range of expertise, based in Monterrey, Nuevo León, Mexico. At 25 years old,
+                                I bring a youthful and innovative perspective to my work, combined with a strong
                                 foundation in cutting-edge technologies.
                             </p>
                             <p className='subtitle is-6'>
-                                My passion for continuous learning extends far beyond technolgy, as I constantly seek 
-                                opportunities to expand my knowledge in various fields. As a professional, 
-                                I thrive on solving complex problems and creating impactful solutions. When not 
-                                immersed in code, I enjoy exploring new destinations to gain fresh perspectives 
-                                and cultural insights, which fuels my creativity and adaptability. 
+                                My passion for continuous learning extends far beyond technolgy, as I constantly seek
+                                opportunities to expand my knowledge in various fields. As a professional,
+                                I thrive on solving complex problems and creating impactful solutions. When not
+                                immersed in code, I enjoy exploring new destinations to gain fresh perspectives
+                                and cultural insights, which fuels my creativity and adaptability.
                             </p>
                             <p className='subtitle is-6'>
-                                Furthermore, I take pleasure in experiencing new culinary delights, 
-                                seeking inspiration even in the world of food, craft beers, and coffee. My unique 
-                                blend of technical expertise and diverse interests allows me to approach challenges 
+                                Furthermore, I take pleasure in experiencing new culinary delights,
+                                seeking inspiration even in the world of food, craft beers, and coffee. My unique
+                                blend of technical expertise and diverse interests allows me to approach challenges
                                 with creativity and resourcefulness, making me a well-rounded and valuable asset to any team.
                             </p>
                         </div>
@@ -150,27 +150,27 @@ export default function About(){
                                     Employment
                                 </p>
                                 <div className='is-linebreak'></div>
-                                <ExperienceCard 
+                                <ExperienceCard
                                     company="Sofex"
-                                    time="January 2023 - Actual" 
+                                    time="January 2023 - Actual"
                                     role="Full-Stack Developer"
                                     url="https://sofex.com.mx"
                                 />
-                                <ExperienceCard 
-                                    company="IndexZero" 
-                                    time="March 2022 - January 2023" 
+                                <ExperienceCard
+                                    company="IndexZero"
+                                    time="March 2022 - January 2023"
                                     role="Full-Stack Developer"
                                     url="https://www.indexzero.io"
                                 />
-                                <ExperienceCard 
+                                <ExperienceCard
                                     company="Alestra Nave"
-                                    time="August 2021 - December 2021" 
+                                    time="August 2021 - December 2021"
                                     role="Open Innovation Intern"
                                     url="https://www.alestra.mx"
                                 />
-                                <ExperienceCard 
+                                <ExperienceCard
                                     company="Cemex Ventures"
-                                    time="August 2019 - August 2020" 
+                                    time="August 2019 - August 2020"
                                     role="Software Engineer Intern"
                                     url="https://www.cemexventures.com"
                                     last={true}
@@ -185,13 +185,13 @@ export default function About(){
                                 <div className='is-linebreak'></div>
                                 <ExperienceCard
                                     company="Tec de Monterrey (Graduate Program)"
-                                    time="School of Government and Public Transformation" 
+                                    time="School of Government and Public Transformation"
                                     role="MSc Applied Economics"
                                     url="https://maestriasydiplomados.tec.mx/posgrados/maestria-en-economia-aplicada?locale=en"
                                 />
                                 <ExperienceCard
                                     company="Tec de Monterrey"
-                                    time="Campus MTY" 
+                                    time="Campus MTY"
                                     role="Innovation and Development Engineer"
                                     url="https://tec.mx/en/innovation-and-transformation/bs-in-innovation-and-development-engineering"
                                     last={true}
@@ -212,13 +212,13 @@ export default function About(){
                                 <div className='is-linebreak'></div>
                                 <ExperienceCard
                                     company="Tec de Monterrey (Graduate Program)"
-                                    time="School of Government and Public Transformation" 
+                                    time="School of Government and Public Transformation"
                                     role="MSc Applied Economics"
                                     url="https://maestriasydiplomados.tec.mx/posgrados/maestria-en-economia-aplicada?locale=en"
                                 />
                                 <ExperienceCard
                                     company="Tec de Monterrey"
-                                    time="Campus MTY" 
+                                    time="Campus MTY"
                                     role="Innovation and Development Engineer"
                                     url="https://tec.mx/en/innovation-and-transformation/bs-in-innovation-and-development-engineering"
                                     last={true}

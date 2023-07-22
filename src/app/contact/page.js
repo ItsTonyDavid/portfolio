@@ -20,12 +20,12 @@ export default function Contact(){
                                 Get in touch
                             </p>
                             <p className="title is-1 has-green-gradient">
-                                Let's talk about your project
+                                Let&apos;s talk about your project
                             </p>
                         </div>
                         <div className='paragraphs'>
                             <p className="is-description subtitle is-5">
-                                Thinking about a new project, a problem to solve, or just want to connect? Let's do it!
+                                Thinking about a new project, a problem to solve, or just want to connect? Let&apos;s do it!
                             </p>
                             <p className="is-description subtitle is-5">
                                 Use the form on this page or get in touch by other means.
