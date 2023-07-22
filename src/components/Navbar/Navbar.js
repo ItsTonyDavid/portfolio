@@ -28,11 +28,11 @@ const Navbar = () => {
                         <Link className="navbar-item" href="/">
                             ⚡️
                         </Link>
-                        <a 
+                        <a
                             role="button"
                             className={isActive ? "navbar-burger is-active" : 'navbar-burger'}
-                            aria-label="menu" 
-                            aria-expanded="false" 
+                            aria-label="menu"
+                            aria-expanded="false"
                             data-target="navbar"
                             onClick={handleToggle}
                         >
@@ -42,24 +42,24 @@ const Navbar = () => {
                         </a>
                     </div>
 
-                    <div 
-                        id="navbar" 
+                    <div
+                        id="navbar"
                         className={isActive ? "navbar-menu is-active" : 'navbar-menu'}
                     >
                         <div className="navbar-end">
-                            <Link className={`navbar-item ${page == '/' ? 'is-selected' : ''}`} href="/">
+                            <Link className={page == '/' ? 'navbar-item is-selected' : 'navbar-item'} href="/">
                                 Home
                             </Link>
-                            <Link className={`navbar-item ${page == '/about' ? 'is-selected' : ''}`} href="/about">
+                            <Link className={ page == '/about' ? 'navbar-item is-selected' : 'navbar-item' } href="/about">
                                 About
                             </Link>
-                            <Link className={`navbar-item ${page == '/services' ? 'is-selected' : ''}`} href="/services">
+                            <Link className={ page == '/services' ? 'navbar-item is-selected' : 'navbar-item' } href="/services">
                                 Services
                             </Link>
-                            <Link className={`navbar-item ${page == '/projects' ? 'is-selected' : ''}`} href="/projects">
+                            <Link className={ page == '/projects' ? 'navbar-item is-selected' : 'navbar-item' } href="/projects">
                                 Projects
                             </Link>
-                            <Link className={`navbar-item ${page == '/contact' ? 'is-selected' : ''}`} href="/contact">
+                            <Link className={ page == '/contact' ? 'navbar-item is-selected' : 'navbar-item' } href="/contact">
                                 Contact
                             </Link>
                         </div>

@@ -6,7 +6,7 @@ const Textarea = ({ label, type="text", rows=2, fixed=true}) => {
             <label className="label">{label}</label>
             <div className="control">
                 <div className="input-container">
-                    <textarea className={`textarea input-field ${fixed ? 'has-fixed-size' : ''}`}  type={type} rows={rows}/>
+                    <textarea className={ fixed ? 'textarea input-field has-fixed-size' : 'textarea input-field' }  type={type} rows={rows}/>
                     <span className="input-highlight"></span>
                 </div>
             </div>

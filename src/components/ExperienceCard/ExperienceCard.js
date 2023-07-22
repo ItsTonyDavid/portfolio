@@ -22,7 +22,7 @@ const ExperienceCard = ({company, time, role, url, last=false}) => {
                 {role}
             </p>
         </div>
-        <div className={`divider-gray ${last ? 'is-last' : ''}`}></div>
+        <div className={ last ? 'divider-gray is-last' : 'divider-gray'} ></div>
     </>);
 }
 
@@ -32,8 +32,8 @@ export default ExperienceCard;
 
 {/* <div>
             <div className='card-titles'>
-                
-                
+
+
             </div>
-            
+
         </div> */}
