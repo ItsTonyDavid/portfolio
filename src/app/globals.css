@@ -1,4 +1,4 @@
-@import 'bulma/css/bulma.min.css';
+@import './bulma.min.css';
 
 :root {
   --black-body: #131313;
