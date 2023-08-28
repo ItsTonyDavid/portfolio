@@ -25,7 +25,8 @@ p.is-gray {
 .is-name-card {
     transition: all .2s ease-in-out;
   }
-  
+
 .is-name-card:hover{
     transform: scale(1.1);
+    transform-origin: left;
 }

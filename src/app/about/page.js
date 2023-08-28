@@ -1,6 +1,7 @@
 'use client';
 import './page.css'
 import Link from 'next/link'
+import profilePic from '../../../public/me2.jpg'
 
 import {  faJs, faPython, faCuttlefish, faNodeJs, faHtml5,
         faCss3, faReact, faVuejs, faDocker, faAws, faFigma } from "@fortawesome/free-brands-svg-icons"
@@ -14,7 +15,7 @@ export default function About(){
     return (<>
         <div className="tile">
             <div className="tile is-parent is-4">
-                <article className="tile is-child notification is-white">
+                <article className="tile is-child notification is-white" style={{backgroundImage: `url(${profilePic.src})` }}>
                     <div className="left-side-about">
                         <div className='titles'>
                             <p className="title is-3 is-image-title">

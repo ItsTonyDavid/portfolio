@@ -53,8 +53,8 @@ export default function Home() {
       <div className="tile is-6">
         { /* PROFILE PIC */ }
         <div className="tile is-parent is-6">
-          <article className="tile is-child notification green-background">
-            <Image src={profilePic} fill={true} alt="Tony David"/>
+          <article className="tile is-child notification green-background profilePic">
+            <Image src={profilePic} alt="Tony David" height={500} width={500}/>
           </article>
         </div>
         { /* END PROFILE PIC */ }
@@ -79,13 +79,19 @@ export default function Home() {
           <div className="tile is-parent">
             <article className="tile is-child notification is-centered-div-horizontaly is-social">
               <div className="is-social-icon linkedin">
-                <FontAwesomeIcon icon={faLinkedinIn} size="2xl"/>
+                <a href="https://linkedin.com/in/iamantoniodavid/" target="_blank">
+                  <FontAwesomeIcon icon={faLinkedinIn} size="2xl"/>
+                </a>
               </div>
               <div className="is-social-icon github">
-                <FontAwesomeIcon icon={faGithub} size="2xl"/>
+                <a href="https://github.com/itsTonyDavid" target="_blank">
+                  <FontAwesomeIcon icon={faGithub} size="2xl"/>
+                </a>
               </div>
               <div className="is-social-icon twitter">
-                <FontAwesomeIcon icon={faTwitter} size="2xl"/>
+                <a href="https://twitter.com/ingAntonioDavid" target="_blank">
+                  <FontAwesomeIcon icon={faTwitter} size="2xl"/>
+                </a>
               </div>
               <div className="is-social-icon instagram">
                 <a href="https://www.instagram.com/itstonycode/" target="_blank">

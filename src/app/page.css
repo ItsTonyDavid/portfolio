@@ -19,6 +19,12 @@
   background-color: #c13584;
 }
 
+.profilePic {
+  padding-top: 2.5rem;
+  padding-bottom: 0px;
+  display: flex;
+}
+
 
 @media screen and (max-width: 768px){
   .tile.is-child.has-margin-right.notification {
