@@ -8,11 +8,6 @@ import { faDesktop, faMobileScreen, faBullseye, faBolt } from "@fortawesome/free
 
 export default function Services() {
 
-  const handleButtonClick = () => {
-    console.log("abc");
-    redirect('/contact')
-  }
-
   return (<>
     <div className="tile">
       <div className="tile is-3">

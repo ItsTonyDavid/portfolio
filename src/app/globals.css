@@ -58,7 +58,8 @@ body {
 
 .is-child.is-white {
   border-radius: 10px;
-  background-image: url("/me2.jpg") !important;
+  /* background-image: url("/me2.jpg") !important; */
+  background-color: black;
   background-size: 150% auto;
   background-repeat: no-repeat;
   background-position-x: 50%;

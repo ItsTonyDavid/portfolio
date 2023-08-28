@@ -53,7 +53,7 @@ export default function Home() {
         { /* PROFILE PIC */ }
         <div className="tile is-parent is-6">
           <article className="tile is-child notification green-background">
-            <Image src="/me.png" fill={true}/>
+            
           </article>
         </div>
         { /* END PROFILE PIC */ }
