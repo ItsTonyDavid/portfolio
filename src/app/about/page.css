@@ -25,8 +25,8 @@
     margin-top: 0 !important;
 }
 
-p.title.is-black-text, p.subtitle.is-black-text {
-    color: black !important;
+p.title.is-white-text, p.subtitle.is-white-text {
+    color: white !important;
 }
 
 .is-title{
@@ -74,7 +74,7 @@ p.title.is-black-text, p.subtitle.is-black-text {
         padding-right: 0rem !important;
         padding-bottom: 0rem;
     }
-    
+
     .has-padding-x-column-right {
         padding-right: 0rem;
         padding-left: 0rem;

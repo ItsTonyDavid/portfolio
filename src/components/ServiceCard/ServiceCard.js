@@ -1,5 +1,5 @@
 import './servicecard.css'
-import { redirect } from 'next/navigation';
+import Link from 'next/link'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Button from '../Inputs/button';
 
@@ -24,9 +24,9 @@ const ServiceCard = ({ name, icon, description, jobs, button=false }) => {
                 ))}
             </div>
             {button && (
-                <div className=''>
-                    <Button text="Contact me" onClick={() => {redirect('/contact');} }/>
-                </div>
+                <Link href="/contact">
+                    <Button text="Contact me"/>
+                </Link>
             )}
         </div>
     );

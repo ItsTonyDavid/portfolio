@@ -1,12 +1,18 @@
 'use client';
 import './page.css';
+import Link from 'next/link'
 import ServiceCard from '@/components/ServiceCard/ServiceCard';
 import Button from '@/components/Inputs/button';
-import { redirect } from 'next/navigation';
 
 import { faDesktop, faMobileScreen, faBullseye, faBolt } from "@fortawesome/free-solid-svg-icons";
 
 export default function Services() {
+
+  const handleButtonClick = () => {
+    console.log("abc");
+    redirect('/contact')
+  }
+
   return (<>
     <div className="tile">
       <div className="tile is-3">
@@ -48,9 +54,9 @@ export default function Services() {
                     <p className='subtitle is-6'>Easy to use sites and apps</p>
                   </li>
                 </div> */}
-                <div className=''>
-                  <Button text="Get Free Price Quote" onClick={() => {redirect('/contact');} }/>
-                </div>
+                <Link href="/contact">
+                  <Button text="Get Free Price Quote"/>
+                </Link>
               </div>
           </article>
         </div>

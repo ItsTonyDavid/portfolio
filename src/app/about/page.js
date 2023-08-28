@@ -1,7 +1,6 @@
 'use client';
 import './page.css'
 import Link from 'next/link'
-import { redirect } from 'next/navigation';
 
 import {  faJs, faPython, faCuttlefish, faNodeJs, faHtml5,
         faCss3, faReact, faVuejs, faDocker, faAws, faFigma } from "@fortawesome/free-brands-svg-icons"
@@ -23,14 +22,14 @@ export default function About(){
                             </p>
                         </div>
                         <div className='titles-about'>
-                            <p className="title is-1 is-black-text">
+                            <p className="title is-1 is-white-text">
                                 Let&apos;s talk about your project
                             </p>
-                            <p className='subtitle is-6 is-subtitle is-black-text'>
+                            <p className='subtitle is-6 is-subtitle is-white-text'>
                                 Let&apos;s super-charge your business today!
                             </p>
                             <Link href="/contact">
-                                <Button text="Get Free Price Quote" onClick={() => {redirect('/contact');} }/>
+                                <Button text="Get Free Price Quote"/>
                             </Link>
                         </div>
                     </div>
