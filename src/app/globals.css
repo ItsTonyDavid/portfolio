@@ -58,7 +58,10 @@ body {
 
 .is-child.is-white {
   border-radius: 10px;
-  background-color: var(--white-tile) !important;
+  background-image: url("/me2.jpg") !important;
+  background-size: 150% auto;
+  background-repeat: no-repeat;
+  background-position-x: 50%;
 }
 
 p.title, p.subtitle {
