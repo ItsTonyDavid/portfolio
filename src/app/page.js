@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import './page.css'
 import { useState } from 'react';
+import profilePic from '../../public/me.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedinIn, faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons"
@@ -53,7 +54,7 @@ export default function Home() {
         { /* PROFILE PIC */ }
         <div className="tile is-parent is-6">
           <article className="tile is-child notification green-background">
-            
+            <Image src={profilePic} fill={true} alt="Tony David"/>
           </article>
         </div>
         { /* END PROFILE PIC */ }
@@ -87,7 +88,9 @@ export default function Home() {
                 <FontAwesomeIcon icon={faTwitter} size="2xl"/>
               </div>
               <div className="is-social-icon instagram">
-                <FontAwesomeIcon icon={faInstagram} size="2xl"/>
+                <a href="https://www.instagram.com/itstonycode/" target="_blank">
+                  <FontAwesomeIcon icon={faInstagram} size="2xl"/>
+                </a>
               </div>
             </article>
           </div>
