@@ -1,6 +1,8 @@
+'use client';
 import './page.css';
 import ServiceCard from '@/components/ServiceCard/ServiceCard';
 import Button from '@/components/Inputs/button';
+import { redirect } from 'next/navigation';
 
 import { faDesktop, faMobileScreen, faBullseye, faBolt } from "@fortawesome/free-solid-svg-icons";
 
@@ -47,7 +49,7 @@ export default function Services() {
                   </li>
                 </div> */}
                 <div className=''>
-                  <Button text="Get Free Price Quote"/>
+                  <Button text="Get Free Price Quote" onClick={() => {redirect('/contact');} }/>
                 </div>
               </div>
           </article>
@@ -57,7 +59,7 @@ export default function Services() {
         <div className='tile'>
           <div className='tile is-parent'>
             <article className="tile is-child notification">
-                <ServiceCard 
+                <ServiceCard
                     name="Web Development"
                     icon={faDesktop}
                     description="My web development process ensures remarkable results and responsiveness in desktop, tablet and mobile."
@@ -67,7 +69,7 @@ export default function Services() {
           </div>
           <div className="tile is-parent">
             <article className="tile is-child notification">
-                <ServiceCard 
+                <ServiceCard
                     name="Mobile Development"
                     icon={faMobileScreen}
                     description="Cutting-edge iOS and Android apps for a captivating mobile experience. Elevate your business with easy accesible apps."
@@ -79,7 +81,7 @@ export default function Services() {
         <div className='tile'>
           <div className='tile is-parent'>
             <article className="tile is-child notification">
-                <ServiceCard 
+                <ServiceCard
                   name="Marketing"
                   icon={faBullseye}
                   description="Compelling campaigns that resonate to your audience, driving meaningful engagement and impactful results."
@@ -89,7 +91,7 @@ export default function Services() {
           </div>
           <div className="tile is-parent">
             <article className="tile is-child notification">
-                <ServiceCard 
+                <ServiceCard
                     name="Connect"
                     icon={faBolt}
                     description="Let's embark on this exciting journey together. Reach out, and let's bring your vision to life!"

@@ -40,12 +40,12 @@
   transition: all .3s;
   font-weight: bold;
   }
-  
+
   .is-button:active,
   .is-button:hover {
   outline: 0;
   }
-  
+
   .is-button span {
   background-color: var(--black-tile);
   padding: 16px 24px;
@@ -54,21 +54,21 @@
   height: 100%;
   transition: 300ms;
   }
-  
+
   .is-button:hover span {
   background: none;
   }
-  
+
   .is-button:active {
     background-image: linear-gradient(to right top, rgb(0, 163, 60), rgb(158, 220, 0));
     transform: scale(0.98);
   }
-  
+
   /* Input container */
   .input-container {
     position: relative;
   }
-  
+
   /* Input field */
   .input-field {
     display: block;
@@ -81,7 +81,7 @@
     background-color: transparent;
     color: white;
   }
-  
+
   /* Input highlight */
   .input-highlight {
     position: absolute;
@@ -92,20 +92,20 @@
     background-image: linear-gradient(to right top, rgb(34, 197, 94), rgb(202, 254, 0));
     transition: all 0.5s ease;
   }
-  
+
   .input-field:focus + .input-highlight {
     width: 100%;
   }
-  
+
   textarea.input-field {
     max-height: 40em;
     min-height: 4.5em;
   }
-  
+
   .label:not(:last-child) {
     margin-bottom: 0em;
   }
-  
+
   .field:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -156,4 +156,52 @@
 .notification a:not(.button):not(.dropdown-item) {
   color: currentColor;
   text-decoration: none;
+}
+
+.spiner {
+  width: 2em;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+.spiner.home {
+  padding: auto 10px;
+  margin: auto 4rem;
+}
+
+.spiner.contact {
+  padding: auto 10px;
+  margin: auto 1.7rem;
+}
+
+circle {
+ fill: none;
+ stroke: var(--black-body);
+ stroke-width: 4;
+ stroke-dasharray: 1, 200;
+ stroke-dashoffset: 0;
+ stroke-linecap: round;
+ animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+ 100% {
+  transform: rotate(360deg);
+ }
+}
+
+@keyframes dash4 {
+ 0% {
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+ }
+
+ 50% {
+  stroke-dasharray: 90, 200;
+  stroke-dashoffset: -35px;
+ }
+
+ 100% {
+  stroke-dashoffset: -125px;
+ }
 }

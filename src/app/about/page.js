@@ -1,5 +1,7 @@
+'use client';
 import './page.css'
 import Link from 'next/link'
+import { redirect } from 'next/navigation';
 
 import {  faJs, faPython, faCuttlefish, faNodeJs, faHtml5,
         faCss3, faReact, faVuejs, faDocker, faAws, faFigma } from "@fortawesome/free-brands-svg-icons"
@@ -28,7 +30,7 @@ export default function About(){
                                 Let&apos;s super-charge your business today!
                             </p>
                             <Link href="/contact">
-                                <Button text="Get a Free Price Quote"/>
+                                <Button text="Get Free Price Quote" onClick={() => {redirect('/contact');} }/>
                             </Link>
                         </div>
                     </div>

@@ -1,4 +1,8 @@
+'use client';
 import './page.css'
+import { useState } from 'react';
+
+import SendEmail from '@/utils/sendEmail';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope } from "@fortawesome/free-solid-svg-icons";
@@ -10,6 +14,53 @@ import Textarea from '@/components/Inputs/textfield';
 import Button from '@/components/Inputs/button';
 
 export default function Contact(){
+
+    const [firstName, setFirstName] = useState('');
+    const [lastName, setLastName] = useState('');
+    const [phone, setPhone] = useState('');
+    const [email, setEmail] = useState('');
+    const [services, setServices] = useState([]);
+    const [message, setMessage] = useState('');
+    const [sending, setSending] = useState(false);
+
+    const handleFirstName = (newName) => {
+      setFirstName(newName);
+    }
+
+    const handleLastName = (newName) => {
+      setLastName(newName);
+    }
+
+    const handlePhone = (newPhone) => {
+      setPhone(newPhone);
+    }
+
+    const handleEmail = (newEmail) => {
+      setEmail(newEmail);
+    }
+
+    const handleMessageChange = (newMessage) => {
+      setMessage(newMessage);
+    }
+
+    const handleButtonClick = async() => {
+      setSending(true);
+      await handleSendEmail();
+      setSending(false);
+    }
+
+    async function handleSendEmail(){
+      const data = {
+        fullname: `${firstName} ${lastName}`,
+        phone: phone,
+        email: email,
+        services: services.join(', '),
+        message: message
+      };
+
+      await SendEmail(data);
+    }
+
     return (<>
         <div className="tile">
             <div className="tile is-parent is-3">
@@ -60,47 +111,47 @@ export default function Contact(){
                     <p className="title is-4">Your Contact Information</p>
                     <div className='columns is-columns'>
                         <div className='column'>
-                            <Input label="First name"/>
+                            <Input label="First name" value={firstName} onChange={handleFirstName}/>
                         </div>
                         <div className='column'>
-                            <Input label="Last name"/>
+                            <Input label="Last name" value={lastName} onChange={handleLastName}/>
                         </div>
                     </div>
                     <div className='columns is-columns'>
                         <div className='column'>
-                            <Input label="Phone number" type="tel"/>
+                            <Input label="Phone number" value={phone} onChange={handlePhone} type="tel"/>
                         </div>
                         <div className='column'>
-                            <Input label="Email address"/>
+                            <Input label="Email address" value={email} onChange={handleEmail}/>
                         </div>
                     </div>
                     <p className="title is-4">What services do you need for your project?</p>
                     <div className='columns is-columns'>
                         <div className='column'>
-                            <Checkbox text="Landing Website"/>
+                            <Checkbox text="Landing Website" services={services} setServices={setServices}/>
                         </div>
                         <div className='column'>
-                            <Checkbox text="Website Development"/>
+                            <Checkbox text="Website Development" services={services} setServices={setServices}/>
                         </div>
                         <div className='column'>
-                            <Checkbox text="App Development"/>
+                            <Checkbox text="App Development" services={services} setServices={setServices}/>
                         </div>
                     </div>
                     <div className='columns is-columns'>
                         <div className='column'>
-                            <Checkbox text="E-Commerce Site"/>
+                            <Checkbox text="E-Commerce Site" services={services} setServices={setServices}/>
                         </div>
                         <div className='column'>
-                            <Checkbox text="Marketing & Social media"/>
+                            <Checkbox text="Marketing & Social media" services={services} setServices={setServices}/>
                         </div>
                         <div className='column'>
-                            <Checkbox text="Other"/>
+                            <Checkbox text="Other" services={services} setServices={setServices}/>
                         </div>
                     </div>
                     <p className="title is-4">Tell me about your project</p>
-                    <Textarea rows="3" fixed={false}/>
+                    <Textarea value={message} onChange={handleMessageChange} rows="3" fixed={false}/>
                     <div className='is-right-button'>
-                        <Button text="Send"/>
+                        <Button text="Send" onClick={async() => { await handleButtonClick();} } loading={sending} page={"contact"}/>
                     </div>
                 </article>
             </div>

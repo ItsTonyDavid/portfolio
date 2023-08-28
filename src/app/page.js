@@ -17,8 +17,26 @@ export default function Home() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [sending, setSending] = useState(false);
 
-  
+  const handleNameChange = (newName) => {
+    setName(newName);
+  }
+
+  const handleEmailChange = (newEmail) => {
+    setEmail(newEmail);
+  }
+
+  const handleMessageChange = (newMessage) => {
+    setMessage(newEmail);
+  }
+
+  const handleButtonClick = async() => {
+    setSending(true);
+    await handleSendEmail();
+    setSending(false);
+  }
+
   async function handleSendEmail(){
     const data = {
       name: name,
@@ -83,7 +101,7 @@ export default function Home() {
         <div className="tile is-parent is-vertical">
           <article className="tile is-child notification">
             <p className="title is-1">
-              Desarrollando experiencias web que cautivan y transforman.
+              Coding experiences that fulfill your needs.
             </p>
           </article>
         </div>
@@ -162,11 +180,11 @@ export default function Home() {
       <div className="tile is-parent">
         <article className="tile is-child notification">
           <div className="content">
-            <Input label="Full name"/>
-            <Input label="Email"/>
-            <Textfield label="Message"/>
+            <Input label="Full name" value={name} onChange={handleNameChange}/>
+            <Input label="Email" value={email} onChange={handleEmailChange}/>
+            <Textfield label="Message" value={message} onChange={handleMessageChange}/>
             <div className='is-right-button'>
-              <Button text="Contact me 👋🏻"/>
+              <Button text="Contact me 👋🏻" onClick={async() => { await handleButtonClick();} } loading={sending} page={"home"}/>
             </div>
           </div>
         </article>

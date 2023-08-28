@@ -1,25 +1,25 @@
-const SendEmail = (data) => {
-    let status = null;
+const SendEmail = async (data) => {
+  try {
     const config = {
         method: "POST",
-        headers: { 
+        headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
         },
         body: JSON.stringify(data)
     }
-    
-    fetch("https://formsubmit.co/ajax/a2096d4b63dc8d07db29de8413c093817979031a11ad2740de046eed1a84144b", config)
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        status = true;
-    }).catch(error => {
-        console.log(error)
-        status = false;
-    });
+    const response = await fetch("https://formsubmit.co/ajax/itsTonyDev@gmail.com", config);
 
-    return status;
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+
+    return true;
+  } catch (error) {
+    console.error("Error sending email:", error);
+    throw error;
+  }
 }
+
 
 export default SendEmail;
