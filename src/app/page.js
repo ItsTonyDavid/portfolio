@@ -2,7 +2,6 @@
 import './page.css'
 import { useState } from 'react';
 import Image from 'next/image'
-import Link from 'next/link'
 
 import profilePic from '../../public/me.png'
 import proj1 from '../../public/mr2.png'
@@ -152,23 +151,21 @@ export default function Home() {
       <div className="tile is-7 is-vertical">
         { /* PORTFOLIO */ }
         <div className="tile is-parent is-vertical">
-          <article className="tile is-child notification is-proj-cont">
-            <div className="is-proj-img">
+          <article className="tile is-child notification">
+          <div className="columns is-projects">
+            <div className="column is-project">
               <ProjectImage image={proj1}/>
             </div>
-            <div className="is-proj-img">
+            <div className="column is-project">
               <ProjectImage image={proj2}/>
             </div>
-            <div className="is-proj-img">
+            <div className="column is-project">
               <ProjectImage image={proj3}/>
             </div>
-            <Link href="/projects" className="is-proj-img is-link-image" style={{backgroundImage: `url(${proj4.src})` }}>
-                <p className="subtitle is-5 is-link-p">
-                  See all projects
-                  <br/>
-                  <FontAwesomeIcon icon={faArrowRight} size="sm"/>
-                </p>
-            </Link>
+            <div className="column is-project">
+              <ProjectImage image={proj4} link={true}/>
+            </div>
+          </div>
           </article>
         </div>
         { /* END PORTFOLIO */ }
