@@ -1,21 +1,24 @@
 import './project.css'
 import React from 'react';
+import Image from 'next/image';
 import Tag from '../Tag/Tag'
 
 
-const Project = ({title, description, technologies, duration, role}) => {
+const Project = ({name, title, description, technologies, duration, role, image}) => {
     return (
         <div className='columns is-main-project'>
             <div className='column'>
                <div className='is-image-project'>
-                <p className="title is-2">
-                        MINIREWARDS
-                    </p>
+                 <Image
+                   priority
+                   src={image}
+                   alt="Project screenshot"
+                 />
                </div>
             </div>
             <div className='column is-project-details'>
                 <p className="title is-4">
-                    Imagen
+                    {name}
                 </p>
                 <p className="title is-3 title-with-gradient">
                     {title}

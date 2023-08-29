@@ -108,7 +108,7 @@ export default function Home() {
         <div className="tile is-parent is-vertical">
           <article className="tile is-child notification">
             <p className="title is-1">
-              Coding experiences that fulfill your needs.
+              Coding experiences with a spark of creativity that fulfill your needs.
             </p>
           </article>
         </div>
