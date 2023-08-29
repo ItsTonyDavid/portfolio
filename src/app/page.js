@@ -35,7 +35,7 @@ export default function Home() {
   }
 
   const handleMessageChange = (newMessage) => {
-    setMessage(newEmail);
+    setMessage(newMessage);
   }
 
   const handleButtonClick = async() => {
