@@ -1,16 +1,23 @@
 'use client';
-import Image from 'next/image'
 import './page.css'
 import { useState } from 'react';
+import Image from 'next/image'
+import Link from 'next/link'
+
 import profilePic from '../../public/me.png'
+import proj1 from '../../public/mr2.png'
+import proj2 from '../../public/cx.png'
+import proj3 from '../../public/area.png'
+import proj4 from '../../public/io.svg'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedinIn, faGithub, faTwitter} from "@fortawesome/free-brands-svg-icons"
-import { faMobileScreen, faDesktop, faChartSimple } from "@fortawesome/free-solid-svg-icons";
+import { faMobileScreen, faDesktop, faChartSimple, faArrowRight} from "@fortawesome/free-solid-svg-icons";
 
 import Input from '@/components/Inputs/input';
 import Textfield from '@/components/Inputs/textfield';
 import Button from '@/components/Inputs/button';
+import ProjectImage from '@/components/ProjectImage/ProjectImage';
 
 import SendEmail from '@/utils/sendEmail';
 
@@ -145,12 +152,23 @@ export default function Home() {
       <div className="tile is-7 is-vertical">
         { /* PORTFOLIO */ }
         <div className="tile is-parent is-vertical">
-          <article className="tile is-child notification">
-            <div className="columns">
-              <div className="column">
-
-              </div>
+          <article className="tile is-child notification is-proj-cont">
+            <div className="is-proj-img">
+              <ProjectImage image={proj1}/>
             </div>
+            <div className="is-proj-img">
+              <ProjectImage image={proj2}/>
+            </div>
+            <div className="is-proj-img">
+              <ProjectImage image={proj3}/>
+            </div>
+            <Link href="/projects" className="is-proj-img is-link-image" style={{backgroundImage: `url(${proj4.src})` }}>
+                <p className="subtitle is-5 is-link-p">
+                  See all projects
+                  <br/>
+                  <FontAwesomeIcon icon={faArrowRight} size="sm"/>
+                </p>
+            </Link>
           </article>
         </div>
         { /* END PORTFOLIO */ }

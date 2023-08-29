@@ -1,0 +1,14 @@
+.is-img-project{
+  height: inherit;
+}
+
+.is-image {
+  object-fit: cover; /* Recortar y ajustar la imagen para llenar el contenedor */
+  object-position: center; /* Centrar la imagen vertical y horizontalmente */
+  border-radius: 25px;
+  height: inherit;
+}
+
+.is-link-image-2 {
+  width: 100%;
+}
