@@ -28,7 +28,6 @@
 .columns.is-projects {
   margin: 0;
   height: 100%;
-  display: flex;
   align-items: center;
   padding-top: 0.1rem;
 }
@@ -37,10 +36,19 @@
   padding: 0 0.5rem !important;
 }
 
-.is-red {
-  background-color: red;
+.form-content {
+  min-height: 312px;
 }
 
+.message-sent {
+  opacity: 0;
+  background-color: var(--black-tile);
+  min-height: inherit;
+}
+
+.form {
+  opacity: 1;
+}
 
 @media screen and (max-width: 768px){
   .tile.is-child.has-margin-right.notification {

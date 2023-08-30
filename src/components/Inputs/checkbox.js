@@ -1,7 +1,7 @@
 import './inputs.css'
 import { useState } from 'react';
 
-const Checkbox = ({ text, services, setServices }) => {
+const Checkbox = ({ text, services, setServices, value, setValue }) => {
 
   const handleCheckboxChange = (event) => {
     const isChecked = event.target.checked;
@@ -11,6 +11,7 @@ const Checkbox = ({ text, services, setServices }) => {
         const updatedServices = services.filter((service) => service !== text);
         setServices(updatedServices);
       }
+      setValue(isChecked);
     };
 
     return (
@@ -19,6 +20,7 @@ const Checkbox = ({ text, services, setServices }) => {
               className="cyberpunk-checkbox"
               type="checkbox"
               onChange={handleCheckboxChange}
+              checked={value}
             />
             {text}
         </label>

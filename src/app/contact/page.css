@@ -23,13 +23,19 @@
     align-items: center;
 }
 
+.contact-content {
+    min-height: 673px;
+}
 
+.message-sent{
+  min-height: inherit;
+}
 
-  span.has-underline-green-gradient {
+  span.has-underline-green-gradient, a.has-underline-green-gradient {
     position: relative;
   }
 
-  span.has-underline-green-gradient::before {
+  span.has-underline-green-gradient::before, a.has-underline-green-gradient::before {
     content: "";
     position: absolute;
     top: 100%;
@@ -39,4 +45,3 @@
     border-radius: 1px;
     background: linear-gradient(to right top, rgb(34, 197, 94), rgb(202, 254, 0));
   }
-  

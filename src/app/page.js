@@ -1,6 +1,7 @@
 'use client';
 import './page.css'
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import { gsap } from 'gsap';
 import Image from 'next/image'
 
 import profilePic from '../../public/me.png'
@@ -17,6 +18,7 @@ import Input from '@/components/Inputs/input';
 import Textfield from '@/components/Inputs/textfield';
 import Button from '@/components/Inputs/button';
 import ProjectImage from '@/components/ProjectImage/ProjectImage';
+import Send from '@/components/Send/Send'
 
 import SendEmail from '@/utils/sendEmail';
 
@@ -25,6 +27,10 @@ export default function Home() {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
   const [sending, setSending] = useState(false);
+  const [sent, setSent] = useState(false);
+  const formRef = useRef(null); // Referencia al formulario
+  const messageRef = useRef(null); // Referencia al mensaje
+
 
   const handleNameChange = (newName) => {
     setName(newName);
@@ -41,7 +47,13 @@ export default function Home() {
   const handleButtonClick = async() => {
     setSending(true);
     await handleSendEmail();
-    setSending(false);
+  }
+
+  const handleSendAnother = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+    setSent(false);
   }
 
   async function handleSendEmail(){
@@ -51,8 +63,28 @@ export default function Home() {
       message: message
     };
 
-    await SendEmail(data);
+    let success = await SendEmail(data);
+    setSent(success);
+    setSending(false);
   }
+
+  useEffect(() => {
+    if (sent) {
+      // Realiza la animación para ocultar el formulario y mostrar el mensaje
+      gsap.to(formRef.current, {
+        opacity: 0, display: 'none', duration: 0.5, ease: 'power2.inOut', onComplete: () => {
+          gsap.to(messageRef.current, { display: 'block', opacity: 1, duration: 0.5, ease: 'power2.inOut' });
+        }
+      });
+    }
+    else{ 
+      gsap.to(messageRef.current, {
+        opacity: 0, display: 'none', duration: 0.5, ease: 'power2.inOut', onComplete: () => {
+          gsap.to(formRef.current, { display: 'block', opacity: 1, duration: 0.5, ease: 'power2.inOut'});
+        }
+      });
+    }
+  }, [sent]);
 
   return (<>
     <div className="tile">
@@ -201,12 +233,24 @@ export default function Home() {
       </div>
       <div className="tile is-parent">
         <article className="tile is-child notification">
-          <div className="content">
-            <Input label="Full name" value={name} onChange={handleNameChange}/>
-            <Input label="Email" value={email} onChange={handleEmailChange}/>
-            <Textfield label="Message" value={message} onChange={handleMessageChange}/>
-            <div className='is-right-button'>
-              <Button text="Contact me 👋🏻" onClick={async() => { await handleButtonClick();} } loading={sending} page={"home"}/>
+          <div className="form-content">
+            <div ref={messageRef} className='message-sent' style={{display: 'none'}}>
+              <Send
+                buttonFunction={handleSendAnother}
+                buttonText="Send another one"
+              >
+                <h1 className="subtitle is-4 has-text-centered">
+                  Message sent
+                </h1>
+              </Send>
+            </div>
+            <div ref={formRef} className='form'>
+              <Input label="Full name" value={name} onChange={handleNameChange}/>
+              <Input label="Email" value={email} onChange={handleEmailChange}/>
+              <Textfield label="Message" value={message} onChange={handleMessageChange}/>
+              <div className='is-right-button'>
+                <Button text="Contact me 👋🏻" onClick={async() => { await handleButtonClick();} } loading={sending} page={"home"}/>
+              </div>
             </div>
           </div>
         </article>

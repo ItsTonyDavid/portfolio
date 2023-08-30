@@ -15,6 +15,13 @@
 
 .is-tags{
   margin-top: -1rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 3;
+}
+
+.is-tags > span {
+  margin-top: 1rem;
 }
 
 .is-image-project{
@@ -22,7 +29,7 @@
   align-items: center;
   justify-content: center;
   height: 100%;
-  margin: auto 5rem;
+  margin: 2rem 5rem;
 }
 
 .is-main-project .is-image-project {

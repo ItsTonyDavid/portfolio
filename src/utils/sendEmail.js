@@ -17,7 +17,7 @@ const SendEmail = async (data) => {
     return true;
   } catch (error) {
     console.error("Error sending email:", error);
-    throw error;
+    return false;
   }
 }
 

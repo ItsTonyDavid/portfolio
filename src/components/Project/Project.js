@@ -31,11 +31,11 @@ const Project = ({name, title, description, technologies, duration, role, image}
                         Technologies
                     </p>
                     <div className='is-tags'>
-                    {technologies.map((i) => (
-                      <span key={i}>
-                        <Tag name={i}/>
-                      </span>
-                    ))}
+                      {technologies.map((i) => (
+                        <span key={i}>
+                          <Tag name={i}/>
+                        </span>
+                      ))}
                     </div>
                 </div>
                 <div className='columns is-columns-info'>
