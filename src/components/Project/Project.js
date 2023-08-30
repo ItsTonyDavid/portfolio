@@ -10,7 +10,6 @@ const Project = ({name, title, description, technologies, duration, role, image}
             <div className='column'>
                <div className='is-image-project'>
                  <Image
-                   priority
                    src={image}
                    alt="Project screenshot"
                  />

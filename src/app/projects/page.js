@@ -2,7 +2,7 @@
 import './page.css'
 import Project from '@/components/Project/Project'
 
-import mr from '../../../public/Minirewards.svg'
+import mr from '../../../public/Minirewards.png'
 import cemex from '../../../public/Cemex.svg'
 import indexzero from '../../../public/IndexZero.svg'
 import area from '../../../public/AREA.svg'

@@ -28,8 +28,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  margin: 2rem 5rem;
+  height: 90%;
+  margin: 2rem 4rem;
+}
+
+@media screen and (max-width: 768px){
+  .is-image-project {
+    margin: 1rem;
+  }
 }
 
 .is-main-project .is-image-project {
