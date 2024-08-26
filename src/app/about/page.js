@@ -153,8 +153,14 @@ export default function About(){
                                 </p>
                                 <div className='is-linebreak'></div>
                                 <ExperienceCard
+                                    company="Earth (NASA)"
+                                    time="September 2023 - Actual"
+                                    role="Full-Stack Developer"
+                                    url="https://earthxyz.ai"
+                                />
+                                <ExperienceCard
                                     company="Sofex"
-                                    time="January 2023 - Actual"
+                                    time="January 2023 - September 2023"
                                     role="Full-Stack Developer"
                                     url="https://sofex.com.mx"
                                 />
